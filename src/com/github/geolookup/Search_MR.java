@@ -17,7 +17,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.commons.io.FileUtils;
 
-import com.geosearch.indexer.Coordinate;
+import com.github.geolookup.Coordinate;
 
 public class Search_MR {
 
