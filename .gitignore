@@ -194,3 +194,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/java,osx,windows,eclipse,intellij,maven
+
+# Output produced during development
+output/*

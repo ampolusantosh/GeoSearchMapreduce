@@ -176,6 +176,7 @@ public class Search_MR {
 
 		// Delete previously created output. This would make it work in
 		// overwrite mode.
+		// Assumes this is running in local. For HDFS path comment this out.
 		FileUtils.deleteDirectory(new File(outputPath));
 
 		Configuration conf = new Configuration();
