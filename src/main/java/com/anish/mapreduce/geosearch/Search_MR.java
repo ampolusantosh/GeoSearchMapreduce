@@ -31,8 +31,8 @@ import com.anish.mapreduce.geosearch.Coordinate;
 public class Search_MR {
 
 	final static String indexFile = "files/index.txt#index.txt";
-	final static String inputPath = "/input";
-	final static String outputPath = "/output";
+	final static String inputPath = "input";
+	final static String outputPath = "output";
 
 	/**
 	 * Mapper class. This reads and creats an in-memory list of all available
@@ -122,7 +122,7 @@ public class Search_MR {
 				// 2 cases - if search long is near international date line,
 				// take abs value. Then filter and narrow down search based on
 				// longitude. else ignore
-				if ((searchLon >= 180 - lonLimit || searchLon >= -180 + lonLimit)
+				if ((searchLon >= 180 - lonLimit || searchLon <= -180 + lonLimit)
 						|| (idx.get(i).getLon() <= searchLon + lonLimit
 								&& idx.get(i).getLon() >= searchLon - lonLimit)) {
 					// Find the lat long with min spherical distance.
